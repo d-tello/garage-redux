@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -18,6 +19,7 @@ import CarsShow from "./containers/cars_show";
 
 const garageName =
   prompt("What is your garage?") ||
+  // eslint-disable-next-line no-mixed-operators
   `garage${Math.floor(10 + Math.random() * 90)}`;
 const initialState = {
   garage: garageName,
@@ -25,6 +27,7 @@ const initialState = {
 };
 
 const reducers = combineReducers({
+  // eslint-disable-next-line no-unused-vars
   garage: (state = null, action) => state,
   cars: carsReducer,
   form: formReducer,
