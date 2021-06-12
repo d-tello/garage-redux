@@ -10,14 +10,14 @@ class CarsNew extends Component {
       return car;
     });
   };
-  renderField(field) {
+  renderField = (field) => {
     return (
       <div>
-        <label>{field.label}</label>
+        <label htmlFor={field.name}>{field.label}</label>
         <input type={field.type} {...field.input} />
       </div>
     );
-  }
+  };
   render() {
     return (
       <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
