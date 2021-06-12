@@ -24,7 +24,7 @@ class CarsIndex extends Component {
     return (
       <div>
         <div>
-          <h3>Garage</h3>
+          <h3>{this.props.garage}</h3>
           <Link to="/cars/new">Add a new car</Link>
         </div>
         {this.renderCars()}

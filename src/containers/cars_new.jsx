@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { reduxForm, Field } from "redux-form";
+import { Link } from "react-router-dom";
 import { createCar } from "../actions";
 
 class CarsNew extends Component {
@@ -20,26 +21,29 @@ class CarsNew extends Component {
   };
   render() {
     return (
-      <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-        <Field
-          label="Brand"
-          name="brand"
-          type="text"
-          component={this.renderField}
-        />
-        <label htmlFor="model">Model</label>
-        <Field label="Model" name="model" component="input" type="text" />
-        <label htmlFor="owner">Owner</label>
-        <Field label="Owner" name="owner" component="input" type="text" />
-        <label htmlFor="plate">Plate</label>
-        <Field label="Plate" name="plate" component="input" type="text" />
-        <button
-          type="submit"
-          disabled={this.props.pristine || this.props.submitting}
-        >
-          Create Car
-        </button>
-      </form>
+      <div>
+        <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
+          <Field
+            label="Brand"
+            name="brand"
+            type="text"
+            component={this.renderField}
+          />
+          <label htmlFor="model">Model</label>
+          <Field label="Model" name="model" component="input" type="text" />
+          <label htmlFor="owner">Owner</label>
+          <Field label="Owner" name="owner" component="input" type="text" />
+          <label htmlFor="plate">Plate</label>
+          <Field label="Plate" name="plate" component="input" type="text" />
+          <button
+            type="submit"
+            disabled={this.props.pristine || this.props.submitting}
+          >
+            Create Car
+          </button>
+        </form>
+        <Link to="/">Back</Link>
+      </div>
     );
   }
 }
