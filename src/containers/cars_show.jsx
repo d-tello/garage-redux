@@ -16,14 +16,26 @@ class CarsShow extends Component {
       return <p>Loading...</p>;
     }
     return (
-      <div>
-        <div>
-          <h3>{this.props.car.brand}</h3>
-          <p>{this.props.car.model}</p>
-          <p>{this.props.car.owner}</p>
-          <p>{this.props.car.plate}</p>
+      <div className="show-container">
+        <div className="show-image" />
+        <div className="show-content">
+          <p>
+            <strong>Brand: </strong> {this.props.car.brand}
+          </p>
+          <p>
+            <strong>Model: </strong> {this.props.car.model}
+          </p>
+          <p>
+            <strong>Owner: </strong> {this.props.car.owner}
+          </p>
+          <p>
+            <strong>Plate number: </strong>
+            {this.props.car.plate}
+          </p>
         </div>
-        <Link to="/">Back</Link>
+        <Link to="/" className="btn btn-show">
+          Back
+        </Link>
       </div>
     );
   }

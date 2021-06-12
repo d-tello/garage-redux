@@ -44,7 +44,8 @@ p {
 }
 
 .car-tile,
-.index-info {
+.index-info,
+.show-container {
   background-color: $white;
   padding: 1rem;
   margin: 1rem;
@@ -84,4 +85,29 @@ p {
     color: $white;
     opacity: 1;
   }
+}
+
+.show-image {
+  background-color: $white;
+  background-image: url("/assets/images/garage.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 30vh;
+  background-size: contain;
+}
+
+.show-content {
+  background-color: $white;
+  padding-left: 2rem;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.btn-show {
+  float: right;
+  margin-top: -4rem;
+  width: 30%;
 }
