@@ -33,7 +33,7 @@ class CarsShow extends Component {
             {this.props.car.plate}
           </p>
         </div>
-        <Link to="/" className="btn btn-show">
+        <Link to="/" className="btn btn-extra btn-show">
           Back
         </Link>
       </div>

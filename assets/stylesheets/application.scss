@@ -45,7 +45,8 @@ p {
 
 .car-tile,
 .index-info,
-.show-container {
+.show-container,
+.form-container {
   background-color: $white;
   padding: 1rem;
   margin: 1rem;
@@ -87,6 +88,10 @@ p {
   }
 }
 
+.btn-extra {
+  background-color: $extra;
+}
+
 .show-image {
   background-color: $white;
   background-image: url("/assets/images/garage.webp");
@@ -110,4 +115,34 @@ p {
   float: right;
   margin-top: -4rem;
   width: 30%;
+}
+
+.form-container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  .btn {
+    margin-block: 1rem;
+  }
+
+  input {
+    border-radius: 0.25rem;
+    border: 1px solid $extra;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+
+    &:focus {
+      border: 1px solid $secondary;
+      outline: none;
+    }
+  }
+}
+
+.form-new-car,
+.form-input {
+  display: flex;
+  flex-direction: column;
 }

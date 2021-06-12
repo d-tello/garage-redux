@@ -13,36 +13,55 @@ class CarsNew extends Component {
   };
   renderField = (field) => {
     return (
-      <div>
+      <div className="form-input">
         <label htmlFor={field.name}>{field.label}</label>
         <input type={field.type} {...field.input} />
+        {field.meta.touched && field.meta.error && (
+          <span className="error">{field.meta.error}</span>
+        )}
       </div>
     );
   };
   render() {
     return (
-      <div>
-        <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
+      <div className="form-container">
+        <form
+          onSubmit={this.props.handleSubmit(this.onSubmit)}
+          className="form-new-car"
+        >
           <Field
             label="Brand"
             name="brand"
             type="text"
             component={this.renderField}
           />
-          <label htmlFor="model">Model</label>
-          <Field label="Model" name="model" component="input" type="text" />
-          <label htmlFor="owner">Owner</label>
-          <Field label="Owner" name="owner" component="input" type="text" />
-          <label htmlFor="plate">Plate</label>
-          <Field label="Plate" name="plate" component="input" type="text" />
+          <Field
+            label="Model"
+            name="model"
+            component={this.renderField}
+            type="text"
+          />
+          <Field
+            label="Owner"
+            name="owner"
+            component={this.renderField}
+            type="text"
+          />
+          <Field
+            label="Plate"
+            name="plate"
+            component={this.renderField}
+            type="text"
+          />
           <button
             type="submit"
             disabled={this.props.pristine || this.props.submitting}
+            className="btn"
           >
             Create Car
           </button>
         </form>
-        <Link to="/" className="btn">
+        <Link to="/" className="btn btn-extra">
           Back
         </Link>
       </div>
