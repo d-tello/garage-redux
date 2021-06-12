@@ -1,28 +1,32 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: "./src/index.jsx",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
   },
-  devtool: 'sourcemap',
+  devtool: "sourcemap",
   devServer: { historyApiFallback: true },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: "babel-loader",
+      },
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack"],
       },
       {
         test: /\.s?css$/,
         exclude: /node_modules/,
-        loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
-      }
-    ]
+        loaders: ["style-loader", "css-loader", "sass-loader"],
+      },
+    ],
   },
   resolve: {
-    extensions: [ '.js', '.jsx' ]
-  }
+    extensions: [".js", ".jsx"],
+  },
 };

@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { fetchCar } from "../actions";
 
+import IconBack from "../../assets/images/icon-back.svg";
+
 class CarsShow extends Component {
   componentDidMount() {
     if (!this.props.car) {
@@ -33,8 +35,8 @@ class CarsShow extends Component {
             {this.props.car.plate}
           </p>
         </div>
-        <Link to="/" className="btn btn-extra btn-show">
-          Back
+        <Link to="/" className="btn btn-extra btn-back">
+          <IconBack />
         </Link>
       </div>
     );

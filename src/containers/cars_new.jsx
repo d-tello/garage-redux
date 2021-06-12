@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
 import { createCar } from "../actions";
+import IconBack from "../../assets/images/icon-back.svg";
 
 class CarsNew extends Component {
   onSubmit = (values) => {
@@ -61,8 +62,8 @@ class CarsNew extends Component {
             Create Car
           </button>
         </form>
-        <Link to="/" className="btn btn-extra">
-          Back
+        <Link to="/" className="btn btn-extra btn-back">
+          <IconBack />
         </Link>
       </div>
     );
