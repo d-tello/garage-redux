@@ -1,24 +1,84 @@
+@import "config/colors";
+@import "config/fonts";
+
 body {
-  background-color: #f6efe3;
+  background-color: $background;
+  font-family: $body-font;
 }
 
-.app {
-  margin-top: 20px;
-  margin-bottom: 20px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headers-font;
+}
+
+.container {
+  width: 100%;
+  margin: 3rem auto;
+}
+
+.index-container {
+  display: flex;
+}
+.index-info {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h3 {
+    text-align: center;
+  }
+}
+
+.cars-list {
+  width: 70%;
+}
+
+.car-tile,
+.index-info {
+  background-color: $white;
+  padding: 1rem;
+  margin: 1rem;
+  color: $text;
+  border-radius: 0.25rem;
 }
 
 .car-tile {
-  background-color: #ffffff;
-  padding: 1rem;
-  margin: 1rem;
   opacity: 1;
-  color: #000000;
 
   &:hover {
     opacity: 0.5;
+  }
+
+  h3 {
+    color: $primary;
   }
 }
 
 .car-tile-link:hover {
   text-decoration: none;
+}
+
+.index-info-image {
+  background-image: url("/assets/images/garage.webp");
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+}
+
+.btn {
+  padding: 0.5rem;
+  background-color: $secondary;
+  color: $white;
+  opacity: 0.7;
+  transition: opacity 0.3s linear;
+
+  &:hover {
+    color: $white;
+    opacity: 1;
+  }
 }

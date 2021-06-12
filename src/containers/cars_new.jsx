@@ -42,7 +42,9 @@ class CarsNew extends Component {
             Create Car
           </button>
         </form>
-        <Link to="/">Back</Link>
+        <Link to="/" className="btn">
+          Back
+        </Link>
       </div>
     );
   }

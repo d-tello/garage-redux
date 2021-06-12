@@ -22,12 +22,15 @@ class CarsIndex extends Component {
   }
   render() {
     return (
-      <div>
-        <div>
+      <div className="index-container">
+        <div className="index-info">
+          <div className="index-info-image" />
           <h3>{this.props.garage}</h3>
-          <Link to="/cars/new">Add a new car</Link>
+          <Link to="/cars/new" className="btn">
+            Add a new car
+          </Link>
         </div>
-        {this.renderCars()}
+        <div className="cars-list">{this.renderCars()}</div>
       </div>
     );
   }

@@ -17,12 +17,12 @@ import CarsIndex from "./containers/cars_index";
 import CarsNew from "./containers/cars_new";
 import CarsShow from "./containers/cars_show";
 
-const garageName =
-  prompt("What is your garage?") ||
-  // eslint-disable-next-line no-mixed-operators
-  `garage${Math.floor(10 + Math.random() * 90)}`;
+// const garageName =
+//   prompt("What is your garage?") ||
+//   // eslint-disable-next-line no-mixed-operators
+//   `garage${Math.floor(10 + Math.random() * 90)}`;
 const initialState = {
-  garage: garageName,
+  garage: "test-garage",
   cars: [],
 };
 
