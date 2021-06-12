@@ -11,7 +11,6 @@ import { reducer as formReducer } from "redux-form";
 import "../assets/stylesheets/application.scss";
 
 import carsReducer from "./reducers/cars_reducer";
-import garageReducer from "./reducers/garage_reducer";
 
 import CarsIndex from "./containers/cars_index";
 import CarsNew from "./containers/cars_new";
